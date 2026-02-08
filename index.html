@@ -570,32 +570,34 @@
                 display: block;
             }
 
+            /* Ocultar menú desktop en móvil por defecto */
             .nav-menu {
-                position: absolute;
-                top: 100%;
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 71px; /* Altura del header sticky */
                 left: 0;
                 right: 0;
                 background: var(--bg-secondary);
                 border-bottom: 1px solid var(--border);
-                flex-direction: column;
                 padding: 20px;
                 gap: 5px;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-out;
+                z-index: 99;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             }
 
             .nav-menu.active {
-                max-height: 500px;
+                display: flex;
             }
 
             .nav-menu a {
                 padding: 12px 16px;
                 border-radius: 8px;
+                width: 100%;
             }
 
             .header-content {
-                flex-wrap: wrap;
+                position: relative;
             }
         }
     </style>
@@ -1047,7 +1049,7 @@
                         </li>
                         <li>En tu cliente Nostr, ve a <strong>Settings</strong> o <strong>Edit Profile</strong></li>
                         <li>Busca la opción <strong>"Lightning Address"</strong> o <strong>"Zaps"</strong></li>
-                        <li>Pega tu dirección Lightning (algo como: nombre@walletofsatoshi.com)</li>
+                        <li>Pega tu dirección Lightning (algo como: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e789888a859582a790868b8b8293888194869388948f8ec984888a">[email&#160;protected]</a>)</li>
                         <li>Guarda cambios → ¡Ya puedes recibir zaps!</li>
                     </ol>
                     <div class="info-box" style="margin-top: 20px;">
@@ -1069,13 +1071,13 @@
                     </div>
                     <div class="key-example" style="margin: 20px 0;">
                         <span class="key-label">Mostrarás:</span>
-                        tunombre@tudominio.com ✓
+                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5125243f3e3c332334112524353e3c383f383e7f323e3c">[email&#160;protected]</a> ✓
                     </div>
 
                     <h4 style="margin-top: 25px;">¿Cómo conseguir NIP-05?</h4>
                     <p style="color: var(--text-secondary); margin-top: 10px;"><strong>Opción 1: Servicio gratuito</strong></p>
                     <ul style="margin-left: 20px; color: var(--text-secondary); margin-top: 10px;">
-                        <li><a href="https://zaps.lol/" target="_blank" style="color: var(--accent);">zaps.lol</a> (gratis, algo como tunombre@zaps.lol)</li>
+                        <li><a href="https://zaps.lol/" target="_blank" style="color: var(--accent);">zaps.lol</a> (gratis, algo como <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4b0b1aaaba9a6b6a184bea5b4b7eaa8aba8">[email&#160;protected]</a>)</li>
                         <li><a href="https://nostr.directory/" target="_blank" style="color: var(--accent);">nostr.directory</a> (vinculado a tu Twitter)</li>
                     </ul>
 
@@ -1093,7 +1095,7 @@
 </pre>
                         </li>
                         <li>Sube el archivo a: <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px;">https://tudominio.com/.well-known/nostr.json</code></li>
-                        <li>En tu perfil Nostr, añade: <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px;">tunombre@tudominio.com</code></li>
+                        <li>En tu perfil Nostr, añade: <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0377766d6c6e617166437776676c6e6a6d6a6c2d606c6e">[email&#160;protected]</a></code></li>
                     </ol>
 
                     <div class="info-box" style="margin-top: 20px;">
@@ -1343,7 +1345,7 @@
                     <div style="margin-top: 15px; padding: 12px; background: var(--bg-tertiary); border-radius: 8px; border: 1px solid var(--border);">
                         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">Lightning Address:</p>
                         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                            <code id="lightning-address" style="color: var(--accent); font-size: 0.9rem; word-break: break-all; flex: 1;">applealpaca64@phoenixwallet.me</code>
+                            <code id="lightning-address" style="color: var(--accent); font-size: 0.9rem; word-break: break-all; flex: 1;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="533223233f36323f23323032656713233b3c363d3a2b24323f3f36277d3e36">[email&#160;protected]</a></code>
                             <button onclick="copyLightning()" class="copy-btn" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s;">
                                 📋 Copiar
                             </button>
@@ -1378,7 +1380,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Copy Lightning address
         function copyLightning() {
             const address = document.getElementById('lightning-address').textContent;
@@ -1499,27 +1501,4 @@
             }
 
             const tabs = document.getElementsByClassName('tab');
-            for (let i = 0; i < tabs.length; i++) {
-                tabs[i].classList.remove('active');
-            }
-
-            document.getElementById(tabName).classList.add('active');
-            evt.currentTarget.classList.add('active');
-        }
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+            for (let i = 0; i < tabs.length;

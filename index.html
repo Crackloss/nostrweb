@@ -1075,7 +1075,7 @@
                     <h4 style="margin-top: 25px;">¿Cómo conseguir NIP-05?</h4>
                     <p style="color: var(--text-secondary); margin-top: 10px;"><strong>Opción 1: Servicio gratuito</strong></p>
                     <ul style="margin-left: 20px; color: var(--text-secondary); margin-top: 10px;">
-                        <li><a href="https://nostrplebs.com/" target="_blank" style="color: var(--accent);">nostrplebs.com</a> (algo como tunombre@nostrplebs.com)</li>
+                        <li><a href="https://zaps.lol/" target="_blank" style="color: var(--accent);">zaps.lol</a> (gratis, algo como tunombre@zaps.lol)</li>
                         <li><a href="https://nostr.directory/" target="_blank" style="color: var(--accent);">nostr.directory</a> (vinculado a tu Twitter)</li>
                     </ul>
 
@@ -1362,7 +1362,7 @@
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <p style="color: var(--text-secondary); margin-bottom: 15px;">Encuéntrame en Nostr:</p>
-                    <a href="https://primal.net/p/nprofile1qqszj8995px29k0t0c06y5cx3wzwqvks0dejpxhnu90sqa708m9lxfs4gnym0" target="_blank">Ver mi perfil →</a>
+                    <a href="https://njump.me/npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3" target="_blank">Ver mi perfil →</a>
                     <p style="color: var(--text-secondary); margin-top: 15px; font-size: 0.9rem;">
                         ¿Feedback? Envíame un zap o DM
                     </p>
@@ -1382,23 +1382,64 @@
         // Copy Lightning address
         function copyLightning() {
             const address = document.getElementById('lightning-address').textContent;
-            navigator.clipboard.writeText(address).then(() => {
-                const btn = event.target;
-                const originalText = btn.textContent;
-                btn.textContent = '✓ Copiado';
-                btn.style.background = 'var(--accent)';
-                btn.style.color = 'white';
-                btn.style.borderColor = 'var(--accent)';
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = 'var(--bg-secondary)';
-                    btn.style.color = 'var(--text-primary)';
-                    btn.style.borderColor = 'var(--border)';
-                }, 2000);
-            }).catch(err => {
-                alert('No se pudo copiar. Cópiala manualmente: ' + address);
-            });
+            const btn = event.target;
+            const originalText = btn.textContent;
+            
+            // Intenta usar la API moderna de clipboard
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(address).then(() => {
+                    btn.textContent = '✓ Copiado';
+                    btn.style.background = 'var(--accent)';
+                    btn.style.color = 'white';
+                    btn.style.borderColor = 'var(--accent)';
+                    
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = 'var(--bg-secondary)';
+                        btn.style.color = 'var(--text-primary)';
+                        btn.style.borderColor = 'var(--border)';
+                    }, 2000);
+                }).catch(err => {
+                    // Fallback si falla la API
+                    fallbackCopy(address, btn, originalText);
+                });
+            } else {
+                // Fallback para navegadores antiguos
+                fallbackCopy(address, btn, originalText);
+            }
+        }
+        
+        function fallbackCopy(text, btn, originalText) {
+            // Método antiguo que funciona en más navegadores
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    btn.textContent = '✓ Copiado';
+                    btn.style.background = 'var(--accent)';
+                    btn.style.color = 'white';
+                    btn.style.borderColor = 'var(--accent)';
+                    
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = 'var(--bg-secondary)';
+                        btn.style.color = 'var(--text-primary)';
+                        btn.style.borderColor = 'var(--border)';
+                    }, 2000);
+                } else {
+                    alert('Lightning Address: ' + text + '\n\nCopia manualmente esta dirección.');
+                }
+            } catch (err) {
+                alert('Lightning Address: ' + text + '\n\nCopia manualmente esta dirección.');
+            }
+            
+            document.body.removeChild(textArea);
         }
 
         // Mobile menu toggle

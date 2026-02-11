@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-02-11T14:21:02.507250+00:00",
-  "total_profiles": 3,
+  "updated_at": "2026-02-11T14:21:04.923168+00:00",
+  "total_profiles": 4,
   "profiles": [
     {
       "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
@@ -19,6 +19,12 @@
       "display_name": "FuckGoku",
       "njump_url": "https://njump.me/npub19qv3n67vh64adv9emkc86qkdz6t7n8nn4psg4svldrejf40de2uqltuv0e",
       "added_at": "2026-02-11T14:19:30.479306+00:00"
+    },
+    {
+      "npub": "npub1hz5700snnsndlezaa80jkjxtvj2944duwj762dkxrfe9yzdwljnszgclyc",
+      "display_name": "KevvoGeek",
+      "njump_url": "https://njump.me/npub1hz5700snnsndlezaa80jkjxtvj2944duwj762dkxrfe9yzdwljnszgclyc",
+      "added_at": "2026-02-11T14:21:02.173129+00:00"
     }
   ]
 }

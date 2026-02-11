@@ -2370,24 +2370,6 @@
             navMenu.classList.toggle('active');
         }
 
-        // Tabs (clientes)
-        function openTab(evt, tabId) {
-            // Ocultar todos los tab-content del mismo grupo
-            const parent = evt.currentTarget.closest('.tabs').parentElement;
-            parent.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-            // Desactivar todas las pestañas del grupo
-            evt.currentTarget.closest('.tabs').querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            // Activar la pestaña y contenido seleccionados
-            evt.currentTarget.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-        }
-
-        // Collapsible (nivel avanzado)
-        function toggleCollapsible(header) {
-            const collapsible = header.closest('.collapsible');
-            collapsible.classList.toggle('active');
-        }
-
         // Close menu when clicking a link
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-menu a');
@@ -2425,3 +2407,30 @@
                     alert('¡Gracias por tu interés! La newsletter estará disponible pronto.');
                     this.reset();
                 });
+            }
+        });
+
+        // Tab functionality
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            const tabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        // Collapsible functionality
+        function toggleCollapsible(header) {
+            const collapsible = header.parentElement;
+            collapsible.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

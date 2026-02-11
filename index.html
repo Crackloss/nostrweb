@@ -2370,6 +2370,24 @@
             navMenu.classList.toggle('active');
         }
 
+        // Tabs (clientes)
+        function openTab(evt, tabId) {
+            // Ocultar todos los tab-content del mismo grupo
+            const parent = evt.currentTarget.closest('.tabs').parentElement;
+            parent.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            // Desactivar todas las pestañas del grupo
+            evt.currentTarget.closest('.tabs').querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            // Activar la pestaña y contenido seleccionados
+            evt.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Collapsible (nivel avanzado)
+        function toggleCollapsible(header) {
+            const collapsible = header.closest('.collapsible');
+            collapsible.classList.toggle('active');
+        }
+
         // Close menu when clicking a link
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-menu a');

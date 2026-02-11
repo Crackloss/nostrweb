@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-02-11T15:43:03.469689+00:00",
-  "total_profiles": 5,
+  "updated_at": "2026-02-11T15:43:10.583507+00:00",
+  "total_profiles": 6,
   "profiles": [
     {
       "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
@@ -31,6 +31,12 @@
       "display_name": "Cryptico_TLGRM",
       "njump_url": "https://njump.me/npub19hynlgrpvwqe2a0mvfse86fyat5s4lc9hfadtztk8mrvcsatvt2s9rhrsq",
       "added_at": "2026-02-11T15:26:14.815994+00:00"
+    },
+    {
+      "npub": "npub19cw8klt35rmjq5uj2najrgy8unakuf38vspc244vq0rj4es764ws77k5kz",
+      "display_name": "misantropitecus",
+      "njump_url": "https://njump.me/npub19cw8klt35rmjq5uj2najrgy8unakuf38vspc244vq0rj4es764ws77k5kz",
+      "added_at": "2026-02-11T15:43:03.151073+00:00"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-02-11T15:26:15.311395+00:00",
-  "total_profiles": 4,
+  "updated_at": "2026-02-11T15:26:21.189079+00:00",
+  "total_profiles": 5,
   "profiles": [
     {
       "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
@@ -25,6 +25,12 @@
       "display_name": "KevvoGeek",
       "njump_url": "https://njump.me/npub1hz5700snnsndlezaa80jkjxtvj2944duwj762dkxrfe9yzdwljnszgclyc",
       "added_at": "2026-02-11T14:21:02.173129+00:00"
+    },
+    {
+      "npub": "npub19hynlgrpvwqe2a0mvfse86fyat5s4lc9hfadtztk8mrvcsatvt2s9rhrsq",
+      "display_name": "Cryptico_TLGRM",
+      "njump_url": "https://njump.me/npub19hynlgrpvwqe2a0mvfse86fyat5s4lc9hfadtztk8mrvcsatvt2s9rhrsq",
+      "added_at": "2026-02-11T15:26:14.815994+00:00"
     }
   ]
 }

@@ -2208,21 +2208,42 @@
                 <div style="max-width: 600px; margin: 0 auto; text-align: center;">
                     <h2 style="margin-bottom: 20px;">📬 Mantente actualizado</h2>
                     <p style="color: var(--text-secondary); margin-bottom: 30px;">
-                        Nostr evoluciona rápido. Suscríbete para recibir tutoriales, novedades y consejos.
+                        Nostr evoluciona rápido. Suscríbete para recibir tutoriales, novedades y consejos sobre Nostr, Bitcoin, autocustodia y privacidad.
                     </p>
-                    <form id="newsletter-form" style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+
+                    <!-- Formulario MailerLite (diseño propio) -->
+                    <form id="newsletter-form" 
+                          class="ml-block-form" 
+                          action="https://assets.mailerlite.com/jsonp/2107412/forms/179129720617567251/subscribe" 
+                          data-code="" 
+                          method="post" 
+                          target="_blank"
+                          style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+                        
                         <input 
                             type="email" 
-                            placeholder="EN DESARROLLO" 
+                            name="fields[email]"
+                            placeholder="Tu email"
+                            aria-label="email"
+                            aria-required="true"
+                            autocomplete="email"
                             required
                             style="flex: 1; min-width: 200px; padding: 14px 20px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-primary); font-size: 1rem;"
                         >
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
                         <button type="submit" class="btn btn-primary" style="white-space: nowrap;">
                             Suscribirme
                         </button>
                     </form>
+
+                    <!-- Mensaje de éxito -->
+                    <div id="newsletter-success" style="display: none; margin-top: 20px; padding: 15px; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--success); border-radius: 8px;">
+                        <p style="color: var(--success); font-weight: 600; margin: 0;">✓ ¡Revisa tu email para confirmar la suscripción!</p>
+                    </div>
+
                     <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 15px;">
-                        Sin spam. Cancelar cuando quieras.
+                        Sin spam. Cancelar cuando quieras. Máximo 1-2 emails al mes.
                     </p>
                 </div>
             </div>
@@ -2399,13 +2420,15 @@
                 });
             });
 
-            // Newsletter form
+            // Newsletter form - mostrar éxito al enviar
             const newsletterForm = document.getElementById('newsletter-form');
             if (newsletterForm) {
-                newsletterForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('¡Gracias por tu interés! La newsletter estará disponible pronto.');
-                    this.reset();
+                newsletterForm.addEventListener('submit', function() {
+                    // Mostrar mensaje de éxito tras breve delay (el form se envía a MailerLite)
+                    setTimeout(function() {
+                        document.getElementById('newsletter-success').style.display = 'block';
+                        newsletterForm.style.display = 'none';
+                    }, 500);
                 });
             }
         });
@@ -2431,6 +2454,12 @@
             const collapsible = header.parentElement;
             collapsible.classList.toggle('active');
         }
+    </script>
+
+    <!-- MailerLite Universal -->
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2107412/forms/179129720617567251/takel");
     </script>
 </body>
 </html>

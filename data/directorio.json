@@ -1,13 +1,7 @@
 {
-  "updated_at": "2026-02-12T19:58:27.455813+00:00",
-  "total_profiles": 11,
+  "updated_at": "2026-02-13T10:33:41.773809+00:00",
+  "total_profiles": 12,
   "profiles": [
-    {
-      "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
-      "display_name": "VoidHash",
-      "njump_url": "https://njump.me/npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
-      "added_at": "2026-02-11T13:17:24.535789+00:00"
-    },
     {
       "npub": "npub1hcnntn7hnwe4punz62favp6fz9r3j5exw0wmxpaj7hgfyqypxqzqpxqygc",
       "display_name": "BitKOKP",
@@ -63,10 +57,22 @@
       "added_at": "2026-02-11T22:24:49.970613+00:00"
     },
     {
-      "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk2",
+      "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
       "display_name": "void_hash",
-      "njump_url": "https://njump.me/npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk2",
+      "njump_url": "https://njump.me/npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
       "added_at": "2026-02-12T19:40:57.867957+00:00"
+    },
+    {
+      "npub": "npub1wtpd049fpdzpr336dyj4rw8he4xvdaqwp870na267nwqys46h3jsksxmht",
+      "display_name": "xakelton",
+      "njump_url": "https://njump.me/npub1wtpd049fpdzpr336dyj4rw8he4xvdaqwp870na267nwqys46h3jsksxmht",
+      "added_at": "2026-02-12T20:15:32.207713+00:00"
+    },
+    {
+      "npub": "npub1qmekr0899lxlhkmz4hxe7t8cmg233u90zcjy08pdturh3c0vangs5mn9mt",
+      "display_name": "flatFeather",
+      "njump_url": "https://njump.me/npub1qmekr0899lxlhkmz4hxe7t8cmg233u90zcjy08pdturh3c0vangs5mn9mt",
+      "added_at": "2026-02-13T09:36:06.373561+00:00"
     }
   ]
 }

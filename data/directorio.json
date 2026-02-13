@@ -1,7 +1,13 @@
 {
-  "updated_at": "2026-02-13T10:37:26.821849+00:00",
+  "updated_at": "2026-02-13T10:39:58.276281+00:00",
   "total_profiles": 12,
   "profiles": [
+    {
+      "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
+      "display_name": "void_hash",
+      "njump_url": "https://njump.me/npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
+      "added_at": "2026-01-01T00:00:00+00:00"
+    },
     {
       "npub": "npub1hcnntn7hnwe4punz62favp6fz9r3j5exw0wmxpaj7hgfyqypxqzqpxqygc",
       "display_name": "BitKOKP",
@@ -55,12 +61,6 @@
       "display_name": "PATRIOTA58",
       "njump_url": "https://njump.me/npub1uh5zxkl9tadvwmumd5e43e5ljh26zm0shsanld3xjn2lrpgt8huqq6e8rm",
       "added_at": "2026-02-11T22:24:49.970613+00:00"
-    },
-    {
-      "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
-      "display_name": "void_hash",
-      "njump_url": "https://njump.me/npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
-      "added_at": "2026-02-12T19:40:57.867957+00:00"
     },
     {
       "npub": "npub1wtpd049fpdzpr336dyj4rw8he4xvdaqwp870na267nwqys46h3jsksxmht",

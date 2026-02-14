@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-02-14T17:35:24.054109+00:00",
-  "total_profiles": 16,
+  "updated_at": "2026-02-14T17:35:26.241644+00:00",
+  "total_profiles": 17,
   "profiles": [
     {
       "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
@@ -97,6 +97,12 @@
       "display_name": "Enrique747",
       "njump_url": "https://njump.me/npub12hje4jvfxkjpn9pq6xlakfzthnyu7gl0xpv2ly0jnjjcuykv26esf2s5e5",
       "added_at": "2026-02-14T11:11:49.278835+00:00"
+    },
+    {
+      "npub": "npub1uay28kq0hq8xr98k2uqk0vjrzqz8fdjh38esz4acdtk045lmgzpqn9naxf",
+      "display_name": "j4b4t0",
+      "njump_url": "https://njump.me/npub1uay28kq0hq8xr98k2uqk0vjrzqz8fdjh38esz4acdtk045lmgzpqn9naxf",
+      "added_at": "2026-02-14T17:35:23.606869+00:00"
     }
   ]
 }

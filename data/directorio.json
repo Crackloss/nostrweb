@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-02-14T21:57:16.973500+00:00",
-  "total_profiles": 19,
+  "updated_at": "2026-02-14T21:57:22.499147+00:00",
+  "total_profiles": 20,
   "profiles": [
     {
       "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
@@ -115,6 +115,12 @@
       "display_name": "Apaxe",
       "njump_url": "https://njump.me/npub1zr3aqpxn5km546cdut3ltshyeqwwmc7tm5lyv05jx99yyfxpwpusrtgeld",
       "added_at": "2026-02-14T19:17:15.172739+00:00"
+    },
+    {
+      "npub": "npub1jnnyfarxal8qvtwzfnqj7fnfd6cpk9shklu27pnvt93l08jgtnsq56j0xl",
+      "display_name": "perseo1971",
+      "njump_url": "https://njump.me/npub1jnnyfarxal8qvtwzfnqj7fnfd6cpk9shklu27pnvt93l08jgtnsq56j0xl",
+      "added_at": "2026-02-14T21:57:16.642345+00:00"
     }
   ]
 }

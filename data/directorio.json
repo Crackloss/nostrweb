@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-02-27T12:33:51.956109+00:00",
-  "total_profiles": 22,
+  "updated_at": "2026-02-28T13:17:03.528760+00:00",
+  "total_profiles": 23,
   "profiles": [
     {
       "npub": "npub19yw2tgzv5tv7klsl5ffsdzuyuqedq7mnyzd08c2lqpmu70kt7vnqp6wvk3",
@@ -133,6 +133,12 @@
       "display_name": "Gameboycolor",
       "njump_url": "https://njump.me/npub1rhlqlkytw73ae5flen49q4seatgv3j3xdk5wupg9690un3l5l7ese5dqx7",
       "added_at": "2026-02-16T16:54:46.606963+00:00"
+    },
+    {
+      "npub": "npub17nk2wn6sgcum0yqe7qn38nd6fspydg9kxc29sja3azjcucyd3gdq5jv5k6",
+      "display_name": "Fiseg1723",
+      "njump_url": "https://njump.me/npub17nk2wn6sgcum0yqe7qn38nd6fspydg9kxc29sja3azjcucyd3gdq5jv5k6",
+      "added_at": "2026-02-27T12:33:51.573001+00:00"
     }
   ]
 }
